@@ -1,0 +1,72 @@
+<!doctype html>
+<html{{#if amp}} ⚡{{/if}} lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}">
+    <meta name="robots" content="{{robots}}">
+    <link rel="canonical" href="{{canonical}}">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    {{#if amp}}
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    {{/if}}
+    <style{{#if amp}} amp-custom{{/if}}>{{{css}}}</style>
+  </head>
+  <body>
+    <div class="u-spacing-container-xxl">
+      <header class="c-main-header">
+        <div class="o-container c-main-header__inner">
+          <div class="c-main-logo">
+            <a class="c-main-logo__link" href="/">LOGO</a>
+          </div>
+        </div>
+      </header>
+      <main class="o-container u-spacing-top-xl">
+        {{#if intro}}
+          <div class="c-intro u-text-align-center">
+            <h1 class="c-intro__title">{{intro.title}}</h1>
+            {{#if intro.body}}<p>{{intro.body}}</p>{{/if}}
+          </div>
+        {{/if}}
+
+        {{#if cards}}
+          <div class="u-spacing-top-l">
+            <div class="o-grid c-card-grid">
+              {{#each cards}}
+                <div class="o-grid__item u-width-4/12@m">
+                  <div class="c-card">
+                    <div class="c-card__figure">
+                      {{#if ../amp}}
+                        <amp-img src="/assets/images/{{this.image}}" width="297" height="198" layout="responsive" alt="{{this.name}}"></amp-img>
+                      {{else}}
+                        <img src="/assets/images/{{this.image}}" width="297" height="198" alt="{{this.name}}">
+                      {{/if}}
+                    </div>
+                    <div class="o-island c-card__body">
+                      <h2 class="c-card__body-title">{{this.name}}</h2>
+                      <p class="c-card__body-copy">{{this.description}}</p>
+                    </div>
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        {{/if}}
+
+        {{#if upselling}}
+          <div class="u-spacing-top-xxl u-text-align-center">
+            <div class="c-upselling">
+              <h2 class="c-upselling__title">Yolo!</h2>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        {{/if}}
+      </main>
+      <footer class="c-main-footer u-text-align-center">
+        <a class="c-main-footer__link" href="https://github.com/maoberlehner">&copy; Markus Oberlehner</a>
+      </footer>
+    </div>
+  </body>
+</html>

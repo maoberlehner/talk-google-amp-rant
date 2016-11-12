@@ -1,0 +1,17 @@
+.c-main-nav {
+  display: flex;
+}
+
+.c-main-nav__link {
+  display: block;
+  color: currentColor;
+}
+
+.c-main-nav__link.is-active {
+  text-decoration: underline;
+}
+
+.c-main-nav__divider {
+  margin-right: spacing(xs);
+  margin-left: spacing(xs);
+}

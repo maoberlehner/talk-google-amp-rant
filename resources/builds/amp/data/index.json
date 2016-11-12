@@ -1,0 +1,19 @@
+{
+  "title": "AMP Performance Test",
+  "description": "AMP Performance Test",
+  "robots": "index,follow",
+  "domain": "127.0.0.1:8080",
+  "intro": {
+    "title": "AMP Performance Test"
+  },
+  "cards": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06"
+  ],
+  "upselling": true,
+  "amp": true
+}

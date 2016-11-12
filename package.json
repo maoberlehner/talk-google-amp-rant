@@ -1,0 +1,42 @@
+{
+  "name": "talk-google-amp-rant",
+  "author": "Markus Oberlehner",
+  "homepage": "https://github.com/maoberlehner/talk-google-amp-rant",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maoberlehner/talk-google-amp-rant"
+  },
+  "bugs": {
+    "url": "https://github.com/maoberlehner/talk-google-amp-rant/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "eslint": "^3.9.0",
+    "eslint-config-modularis": "^2.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "fs-extra": "^1.0.0",
+    "handlebars": "^4.0.5",
+    "handlebars-helpers": "^0.7.5",
+    "http-server": "^0.9.0",
+    "node-sass": "^3.10.1",
+    "node-sass-magic-importer": "^2.1.1",
+    "postcss": "^5.2.5",
+    "postcss-scss": "^0.3.1",
+    "pre-git": "^3.10.0",
+    "rimraf": "^2.5.4",
+    "stylelint": "^7.5.0",
+    "stylelint-config-modularis": "^2.0.1"
+  },
+  "scripts": {
+    "start": "http-server ./dist -o",
+    "build": "node scripts/build.js",
+    "lint": "stylelint 'resources/**/*.scss'"
+  },
+  "config": {
+    "pre-git": {
+      "pre-commit": [
+        "yarn run lint"
+      ]
+    }
+  }
+}

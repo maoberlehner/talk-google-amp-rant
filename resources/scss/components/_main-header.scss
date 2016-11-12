@@ -1,0 +1,20 @@
+.c-main-header {
+  padding-top: spacing(m);
+  padding-bottom: spacing(m);
+  background: $brand-color;
+  color: $brand-color-contrast;
+}
+
+.c-main-header__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 33em) {
+  .c-main-header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

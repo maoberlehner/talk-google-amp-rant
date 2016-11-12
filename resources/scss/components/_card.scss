@@ -1,0 +1,19 @@
+.c-card {
+  border: 1px solid color(b, gray);
+}
+
+.c-card__body > * + * {
+  margin-top: spacing(xs, true);
+}
+
+.c-card__body-title {
+  font-size: font-size(l);
+}
+
+.c-card__body-copy {
+  font-size: font-size(s);
+}
+
+.c-card__action {
+  display: inline-block;
+}
