@@ -4,7 +4,8 @@
   "robots": "index,follow",
   "domain": "127.0.0.1:8080",
   "intro": {
-    "title": "non-AMP Performance Test"
+    "title": "non-AMP Performance Test",
+    "body": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et."
   },
   "cards": [
     "01",
