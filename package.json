@@ -28,7 +28,7 @@
     "stylelint-config-modularis": "^2.0.1"
   },
   "scripts": {
-    "start": "http-server ./dist -o",
+    "start": "yarn run build && http-server ./dist -o",
     "build": "node scripts/build.js",
     "lint": "stylelint 'resources/**/*.scss'"
   },
