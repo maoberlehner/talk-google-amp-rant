@@ -1,6 +1,5 @@
 const fs = require(`fs-extra`);
 const Handlebars = require(`handlebars`);
-const handlebarsHelpers = require(`handlebars-helpers`);
 const path = require(`path`);
 const rimraf = require(`rimraf`);
 
@@ -14,10 +13,6 @@ const builds = getDirectories(`${cwd}/resources/builds`);
 const css = buildCss(`${cwd}/resources/scss/global.scss`);
 
 rimraf.sync(distDirectory);
-
-handlebarsHelpers.math({
-  handlebars: Handlebars
-});
 
 builds.forEach((build) => {
   const data = {
